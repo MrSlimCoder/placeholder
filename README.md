@@ -1,2 +1,3 @@
-# website
-The website for ArtFreely.
+# Pre-Launch Website
+
+The beta signup website for Freely.
