@@ -5,6 +5,8 @@ $grey-darker: #373737;
 $grey-dark: #525252;
 $grey-light: rgba(55, 55, 55, 0.6);
 $white-ter: #f1f1f1;
+$link: #942374;
+$modal-background-background-color: rgba(0, 0, 0, 0.35);
 
 $radius: 6px;
 $size-small: 1rem;
@@ -19,10 +21,10 @@ $input-focus-box-shadow-size: 0;
 $input-placeholder-color: rgba(82, 82, 82, 0.6);
 
 // Make buttons match the input theme to look seamless
-$button-color: #942374;
+$button-color: $link;
 $button-background-color: $white-ter;
 $button-border-width: 0;
-$button-hover-color: #5A1546;
+$button-hover-color: #5a1546;
 
 // top,right,bottom,left
 $section-padding: 0 0 0 6rem;
@@ -33,6 +35,8 @@ $section-padding: 0 0 0 6rem;
 
 @import "../../node_modules/bulma/sass/grid/columns.sass";
 
+@import "../../node_modules/bulma/sass/components/modal.sass";
+
 @import "../../node_modules/bulma/sass/elements/button.sass";
 @import "../../node_modules/bulma/sass/elements/container.sass";
 
@@ -41,4 +45,3 @@ $section-padding: 0 0 0 6rem;
 @import "../../node_modules/bulma/sass/form/tools.sass";
 
 @import "../../node_modules/bulma/sass/layout/section.sass";
-

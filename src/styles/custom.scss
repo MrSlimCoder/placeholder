@@ -1,3 +1,7 @@
+@charset "utf-8";
+
+@import "./theme.scss";
+
 // Font weight helpers
 @for $i from 1 through 9 {
     .is-text-weight-#{$i * 100} {
@@ -43,4 +47,20 @@
 
 .main-column {
     padding-top: 16rem;
+}
+
+#after-register-message {
+    background-color: $white-ter;
+    padding: 1rem 1.75rem;
+    border-radius: $radius;
+}
+
+a {
+    text-decoration: underline;
+}
+
+#verified-modal > .modal-content {
+    background-color: $white;
+    padding: 3rem;
+    border-radius: 2px;
 }
