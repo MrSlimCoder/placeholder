@@ -23,3 +23,20 @@
 .wide {
     width: 100%;
 }
+
+.big-art {
+    background-image: url("../../assets/cool-art.png");
+    background-position: center, center;
+    justify-content: center;
+    position: relative;
+}
+
+.section,
+.columns {
+    height: 100vh;
+}
+
+.column > .caption {
+    position: absolute;
+    bottom: 1rem;
+}
