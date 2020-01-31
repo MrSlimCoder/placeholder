@@ -37,7 +37,7 @@
     "scripts": {
         "build": "parcel build --experimental-scope-hoisting src/*.html",
         "start": "parcel serve src/*.html",
-        "lint": "eslint ./**/*.js",
+        "lint": "eslint --ignore-path .gitignore --ext js .",
         "prebuild": "rm -rf dist"
     },
     "version": "1.0.0",
