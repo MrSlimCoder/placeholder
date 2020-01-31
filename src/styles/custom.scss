@@ -1,0 +1,25 @@
+// Font weight helpers
+@for $i from 1 through 9 {
+    .is-text-weight-#{$i * 100} {
+        font-weight: #{$i * 100};
+    }
+}
+
+// Margin helpers
+@for $i from 1 through 6 {
+    .is-margin-bottom-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+}
+
+.not-very-wide {
+    max-width: 33rem;
+}
+
+.not-super-wide {
+    max-width: 36rem;
+}
+
+.wide {
+    width: 100%;
+}

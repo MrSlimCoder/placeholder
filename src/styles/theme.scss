@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// Colors
+$grey-darker: #373737;
+$grey-dark: #525252;
+$grey-light: rgba(55, 55, 55, 0.6);
+$white-ter: #f1f1f1;
+
+$radius: 6px;
+$size-small: 1rem;
+
+// Make input fields a flat background
+$input-background-color: $white-ter;
+$input-border-color: none;
+$input-hover-border-color: none;
+$input-focus-border-color: none;
+$input-shadow: none;
+$input-focus-box-shadow-size: 0;
+$input-placeholder-color: rgba(82, 82, 82, 0.6);
+
+// Make buttons match the input theme to look seamless
+$button-color: #942374;
+$button-background-color: $white-ter;
+$button-border-width: 0;
+$button-hover-color: #5A1546;
+
+// top,right,bottom,left
+$section-padding: 16rem 3rem 0 3rem;
+
+@import "../../node_modules/bulma/bulma.sass";

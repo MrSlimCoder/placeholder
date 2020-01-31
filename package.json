@@ -1,0 +1,47 @@
+{
+    "author": {
+        "email": "business@freely.is",
+        "name": "Freely",
+        "url": "https://freely.is"
+    },
+    "browser": "dist/browser/index.js",
+    "bugs": {
+        "url": "https://github.com/freelyis/placeholder/issues"
+    },
+    "contributors": [
+        {
+            "email": "jonah@jonah.pw",
+            "name": "Jonah Snider",
+            "url": "https://jonah.pw"
+        }
+    ],
+    "devDependencies": {
+        "browserify": "^16.5.0",
+        "eslint": "^6.8.0",
+        "eslint-plugin-jsdoc": "^21.0.0",
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.25.0"
+    },
+    "engines": {
+        "node": "12"
+    },
+    "license": "Apache-2.0",
+    "main": "dist/main/index.js",
+    "module": "dist/module/index.js",
+    "name": "freely-placeholder",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/freelyis/placeholder.git"
+    },
+    "scripts": {
+        "build": "parcel build --experimental-scope-hoisting src/*.html",
+        "start": "parcel serve src/*.html",
+        "lint": "eslint ./**/*.js",
+        "prebuild": "rm -rf dist"
+    },
+    "version": "1.0.0",
+    "dependencies": {
+        "bulma": "^0.8.0"
+    }
+}
