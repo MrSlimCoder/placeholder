@@ -4,7 +4,6 @@
         "name": "Freely",
         "url": "https://freely.is"
     },
-    "browser": "dist/browser/index.js",
     "bugs": {
         "url": "https://github.com/freelyis/placeholder/issues"
     },
@@ -15,19 +14,21 @@
             "url": "https://jonah.pw"
         }
     ],
+    "dependencies": {
+        "bulma": "^0.8.0"
+    },
     "devDependencies": {
-        "browserify": "^16.5.0",
         "eslint": "^6.8.0",
         "eslint-plugin-jsdoc": "^21.0.0",
         "parcel-bundler": "^1.12.4",
+        "regenerator-runtime": "^0.13.3",
         "sass": "^1.25.0"
     },
     "engines": {
         "node": "12"
     },
     "license": "Apache-2.0",
-    "main": "dist/main/index.js",
-    "module": "dist/module/index.js",
+    "main": "src/scripts/index.js",
     "name": "freely-placeholder",
     "private": true,
     "repository": {
@@ -36,12 +37,9 @@
     },
     "scripts": {
         "build": "parcel build --experimental-scope-hoisting src/*.html",
-        "start": "parcel serve src/*.html",
         "lint": "eslint --ignore-path .gitignore --ext js .",
-        "prebuild": "rm -rf dist"
+        "prebuild": "rm -rf dist",
+        "start": "parcel serve src/*.html"
     },
-    "version": "1.0.0",
-    "dependencies": {
-        "bulma": "^0.8.0"
-    }
+    "version": "1.0.0"
 }

@@ -21,15 +21,14 @@
             media="screen"
             href="./styles/custom.scss"
         />
-        <script src="./scripts/index.js"></script>
+        <script src="./scripts/index.js" type="module"></script>
     </head>
 
     <body>
         <section class="section">
             <div class="columns">
                 <div
-                    class="column is-two-thirds is-gapless is-marginless"
-                    style="padding-top: 16rem;"
+                    class="column main-column is-two-thirds is-gapless is-marginless"
                 >
                     <div class="container">
                         <main class="not-very-wide">
@@ -54,21 +53,24 @@
                         </main>
                     </div>
                     <div class="container">
-                        <form class="not-super-wide">
+                        <form id="form" class="not-super-wide">
                             <label class="label is-size-5"
                                 >Email Subscription</label
                             >
                             <div class="field has-addons">
                                 <div class="control wide">
                                     <input
+                                        id="email-field"
                                         class="input"
                                         type="email"
                                         autocomplete="email"
                                         placeholder="toucan@freely.is"
+                                        required
                                     />
                                 </div>
                                 <div class="control">
                                     <button
+                                        id="submit-button"
                                         class="button has-text-weight-medium"
                                         type="submit"
                                     >
