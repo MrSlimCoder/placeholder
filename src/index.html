@@ -1,190 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Freely Beta</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://rsms.me/inter/inter.css"
-        />
-        <link rel="stylesheet" media="screen" href="./styles/custom.scss" />
-        <script src="./scripts/index.js" type="module"></script>
-    </head>
 
-    <body>
-        <noscript>
-            <p style="font-size: 50px; color: red;">
-                You need to enable JavaScript to use this site.
-            </p>
-        </noscript>
-        <section class="section">
-            <div>
-                <div id="mobile-top-image" class="big-art is-flex">
-                    <img
-                        src="../assets/freely-white.svg"
-                        width="150"
-                        alt="Freely logo"
-                    />
-                    <span class="caption"
-                        >Art by
-                        <a
-                            href="https://twitter.com/ploomutoo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >@ploomutoo on Twitter</a
-                        ></span
-                    >
+<head>
+    <meta charset="utf-8" />
+    <title>Freely Beta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" media="screen" href="./styles/custom.scss" />
+    <script src="./scripts/index.js" type="module"></script>
+</head>
+
+<body>
+    <noscript>
+        <p style="font-size: 50px; color: red;">
+            You need to enable JavaScript to use this site.
+        </p>
+    </noscript>
+    <section class="section">
+        <div>
+            <div id="mobile-top-image" class="big-art is-flex">
+                <img src="../assets/freely-white.svg" width="150" alt="Freely logo" />
+                <span class="caption">Art by
+                    <a href="https://twitter.com/ploomutoo" target="_blank" rel="noopener noreferrer">@ploomutoo on
+                        Twitter</a></span>
+            </div>
+            <div class="top-margin-on-desktop">
+                <div class="container">
+                    <main class="not-very-wide">
+                        <h1 class="is-size-1 is-text-weight-900 has-text-grey-darker is-margin-bottom-1">
+                            Freely Beta
+                        </h1>
+
+                        <p class="is-size-5 has-text-grey-dark">
+                            A platform for creators to showcase their work,
+                            connect with their audience, and sell their
+                            services.
+                        </p>
+                        <br />
+                        <p class="is-size-5 has-text-grey-dark is-margin-bottom-1">
+                            Want to be part of our closed beta? Subscribe
+                            now for the chance to become a beta tester.
+                        </p>
+                    </main>
                 </div>
-                <div class="top-margin-on-desktop">
-                    <div class="container">
-                        <main class="not-very-wide">
-                            <h1
-                                class="is-size-1 is-text-weight-900 has-text-grey-darker is-margin-bottom-1"
-                            >
-                                Freely Beta
-                            </h1>
-
-                            <p class="is-size-5 has-text-grey-dark">
-                                A platform for creators to showcase their work,
-                                connect with their audience, and sell their
-                                services.
-                            </p>
-                            <br />
-                            <p
-                                class="is-size-5 has-text-grey-dark is-margin-bottom-1"
-                            >
-                                Want to be part of our closed beta? Subscribe
-                                now for the chance to become a beta tester.
-                            </p>
-                        </main>
-                    </div>
-                    <div 
-                        id="after-register-error" 
-                        class="not-super-wide is-hidden is-margin-bottom-1"
-                        style="
+                <div id="after-register-error" class="not-super-wide is-hidden is-margin-bottom-1" style="
                             color: red;
                             font-size: 20px;
                             font-weight: 500;
-                            "
-                    >
-                        <!-- Placeholder, updated with javascript -->
-                        <p id="error-text">There has been an error, please try again.</p>
+                            ">
+                    <!-- Placeholder, updated with javascript -->
+                    <p id="error-text">There has been an error, please try again.</p>
+                </div>
+                <div class="container">
+                    <!-- Initially this is hidden -->
+                    <div id="after-register-message" class="not-super-wide is-hidden">
+                        <p>Thanks for signing up for the closed beta.</p>
+                        <p>
+                            Don’t forget to follow us on
+                            <a href="https://twitter.com/freelyis" target="_blank" rel="noopener noreferrer">Twitter</a>
+                            <!-- This Discord invite is just for the landing page. -->
+                            or join our
+                            <a href="https://discord.gg/PeAhMgP" target="_blank" rel="noopener noreferrer">Discord</a>.
+                        </p>
                     </div>
-                    <div class="container">
-                        <!-- Initially this is hidden -->
-                        <div
-                            id="after-register-message"
-                            class="not-super-wide is-hidden"
-                        >
-                            <p>Thanks for signing up for the closed beta.</p>
-                            <p>
-                                Don’t forget to follow us on
-                                <a
-                                    href="https://twitter.com/freelyis"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >Twitter</a
-                                >
-                                <!-- This Discord invite is just for the landing page. -->
-                                or join our
-                                <a
-                                    href="https://discord.gg/PeAhMgP"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    >Discord</a
-                                >.
-                            </p>
-                        </div>
-                        <!-- Not visible until it has the `is-active` class -->
-                        <div id="verified-modal" class="modal">
-                            <div class="modal-background"></div>
-                            <div class="modal-content has-text-centered">
-                                <div>
-                                    <h2 class="has-text-weight-bold is-size-3">
-                                        You've been verified
-                                    </h2>
-                                    <p>
-                                        Now that you’re on our email list, just
-                                        keep an eye on your email for an invite
-                                        to the beta.
-                                    </p>
-                                    <br />
-                                    <p>
-                                        Don’t forget to follow us on
-                                        <a
-                                            href="https://twitter.com/freelyis"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            >Twitter</a
-                                        >
-                                        <!-- This Discord invite is just for the landing page. -->
-                                        or join our
-                                        <a
-                                            href="https://discord.gg/PeAhMgP"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            >Discord</a
-                                        >.
-                                    </p>
-                                </div>
+                    <!-- Not visible until it has the `is-active` class -->
+                    <div id="verified-modal" class="modal">
+                        <div class="modal-background"></div>
+                        <div class="modal-content has-text-centered">
+                            <div>
+                                <h2 class="has-text-weight-bold is-size-3">
+                                    You've been verified
+                                </h2>
+                                <p>
+                                    Now that you’re on our email list, just
+                                    keep an eye on your email for an invite
+                                    to the beta.
+                                </p>
+                                <br />
+                                <p>
+                                    Don’t forget to follow us on
+                                    <a href="https://twitter.com/freelyis" target="_blank"
+                                        rel="noopener noreferrer">Twitter</a>
+                                    <!-- This Discord invite is just for the landing page. -->
+                                    or join our
+                                    <a href="https://discord.gg/PeAhMgP" target="_blank"
+                                        rel="noopener noreferrer">Discord</a>.
+                                </p>
                             </div>
-                            <button
-                                id="close-modal-button"
-                                class="modal-close is-large"
-                                aria-label="close"
-                            ></button>
                         </div>
-                        <div id="form" class="not-super-wide">
-                            <label class="label is-size-5"
-                                >Email Subscription</label
-                            >
-                            <div class="field has-addons">
-                                <div class="control wide">
-                                    <input
-                                        id="email-field"
-                                        class="input"
-                                        type="email"
-                                        autocomplete="email"
-                                        placeholder="toucan@freely.is"
-                                        required
-                                    />
-                                </div>
-                                <div class="control">
-                                    <button
-                                        id="submit-button"
-                                        class="button has-text-weight-medium"
-                                        type="submit"
-                                    >
-                                        Submit
-                                    </button>
-                                </div>
-                            </div>
-                            <p class="help">
-                                We will only use your email for Freely beta
-                                updates and news.
-                            </p>
-                        </div>
+                        <button id="close-modal-button" class="modal-close is-large" aria-label="close"></button>
                     </div>
-
-                    <div id="desktop-side-image" class="big-art is-flex">
-                        <img
-                            src="../assets/freely-white.svg"
-                            alt="Freely logo"
-                        />
-                        <span class="caption"
-                            >Art by
-                            <a
-                                href="https://twitter.com/ploomutoo"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >@ploomutoo on Twitter</a
-                            ></span
-                        >
+                    <div id="form" class="not-super-wide">
+                        <label class="label is-size-5">Email Subscription</label>
+                        <div class="field has-addons">
+                            <div class="control wide">
+                                <input id="email-field" class="input" type="email" autocomplete="email"
+                                    placeholder="toucan@freely.is" required />
+                            </div>
+                            <div class="control">
+                                <button id="submit-button" class="button has-text-weight-medium" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                        <p class="help">
+                            We will only use your email for Freely beta
+                            updates and news.
+                        </p>
                     </div>
                 </div>
+
+                <div id="desktop-side-image" class="big-art is-flex">
+                    <img src="../assets/freely-white.svg" alt="Freely logo" />
+                    <span class="caption">Art by
+                        <a href="https://twitter.com/ploomutoo" target="_blank" rel="noopener noreferrer">@ploomutoo on
+                            Twitter</a></span>
+                </div>
             </div>
-        </section>
-    </body>
+        </div>
+    </section>
+</body>
+
 </html>
