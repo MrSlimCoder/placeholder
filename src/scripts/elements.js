@@ -51,4 +51,4 @@ export const error = document.getElementById("after-register-error");
  *
  * @type {HTMLParagraphElement}
  */
-export const errorText = document.getElementById("after-register-error");
+export const errorText = document.getElementById("error-text");
