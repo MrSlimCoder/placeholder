@@ -9,27 +9,30 @@
             type="text/css"
             href="https://rsms.me/inter/inter.css"
         />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="./styles/theme.scss"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            media="screen"
-            href="./styles/custom.scss"
-        />
+        <link rel="stylesheet" media="screen" href="./styles/custom.scss" />
         <script src="./scripts/index.js" type="module"></script>
     </head>
 
     <body>
         <section class="section">
-            <div class="columns">
-                <div
-                    class="column main-column is-two-thirds is-gapless is-marginless"
-                >
+            <div>
+                <div id="mobile-top-image" class="big-art is-flex">
+                    <img
+                        src="../assets/freely-white.svg"
+                        width="150"
+                        alt="Freely logo"
+                    />
+                    <span class="caption"
+                        >Art by
+                        <a
+                            href="https://twitter.com/ploomutoo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >@ploomutoo on Twitter</a
+                        ></span
+                    >
+                </div>
+                <div class="top-margin-on-desktop">
                     <div class="container">
                         <main class="not-very-wide">
                             <h1
@@ -116,7 +119,7 @@
                                 aria-label="close"
                             ></button>
                         </div>
-                        <form id="form" class="not-super-wide">
+                        <div id="form" class="not-super-wide">
                             <label class="label is-size-5"
                                 >Email Subscription</label
                             >
@@ -145,20 +148,24 @@
                                 We will only use your email for Freely beta
                                 updates and news.
                             </p>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <div class="column big-art is-flex">
-                    <img src="../assets/freely-white.svg" alt="Freely logo" />
-                    <span class="caption"
-                        >Art by
-                        <a
-                            href="https://twitter.com/ploomutoo"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >@ploomutoo on Twitter</a
-                        ></span
-                    >
+
+                    <div id="desktop-side-image" class="big-art is-flex">
+                        <img
+                            src="../assets/freely-white.svg"
+                            alt="Freely logo"
+                        />
+                        <span class="caption"
+                            >Art by
+                            <a
+                                href="https://twitter.com/ploomutoo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >@ploomutoo on Twitter</a
+                            ></span
+                        >
+                    </div>
                 </div>
             </div>
         </section>

@@ -35,28 +35,64 @@
     position: relative;
 }
 
-.section,
-.columns {
+.section {
     height: 100vh;
 }
 
-.column > .caption {
+.caption {
     position: absolute;
-    bottom: 1rem;
+    @media screen and (min-width: $mobile-breakpoint) {
+        right: 1em;
+    }
+    bottom: 1em;
+    color: $white-ter;
+
+    a {
+        color: $white-ter;
+    }
 }
 
-.main-column {
-    padding-top: 16rem;
+.top-margin-on-desktop {
+    @media screen and (min-width: $mobile-breakpoint) {
+        padding-top: 10rem;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+#desktop-side-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33%;
+    height: 100vh;
+}
+
+#mobile-top-image {
+    visibility: hidden;
+    // Don't let this screw up the desktop layout by being invisible but still having dimensions
+    height: 0;
+    width: 0;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    #mobile-top-image {
+        visibility: visible;
+        height: 270px;
+    }
+    #desktop-side-image {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
 }
 
 #after-register-message {
     background-color: $white-ter;
     padding: 1rem 1.75rem;
     border-radius: $radius;
-}
-
-a {
-    text-decoration: underline;
 }
 
 #verified-modal > .modal-content {

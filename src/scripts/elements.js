@@ -1,7 +1,7 @@
 /**
- * The form element where the user submits their email to be registered.
+ * The div element where the user submits their email to be registered.
  *
- * @type {HTMLFormElement}
+ * @type {HTMLDivElement}
  */
 export const form = document.getElementById("form");
 /**

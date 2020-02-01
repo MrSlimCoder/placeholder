@@ -1,4 +1,5 @@
 import "regenerator-runtime/runtime";
+import "core-js";
 import {
     register,
 } from "./api";
@@ -27,7 +28,7 @@ form.addEventListener("submit", async event => {
     }
 });
 
-// Current page URL is `https://freely.is/?verified`
 if (window.location.search === "?verified") {
+    // Current page URL is `https://freely.is/?verified`
     updatePageForVerification(true);
 }

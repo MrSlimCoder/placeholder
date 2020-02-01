@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$mobile-breakpoint: 1280px;
+
 // Colors
 $grey-darker: #373737;
 $grey-dark: #525252;
@@ -29,11 +31,10 @@ $button-hover-color: #5a1546;
 // top,right,bottom,left
 $section-padding: 0 0 0 6rem;
 
+
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 
 @import "../../node_modules/bulma/sass/base/_all.sass";
-
-@import "../../node_modules/bulma/sass/grid/columns.sass";
 
 @import "../../node_modules/bulma/sass/components/modal.sass";
 
@@ -45,3 +46,13 @@ $section-padding: 0 0 0 6rem;
 @import "../../node_modules/bulma/sass/form/tools.sass";
 
 @import "../../node_modules/bulma/sass/layout/section.sass";
+
+@media (max-width: $mobile-breakpoint) {
+    .section {
+        padding: 0 0rem 0 0rem;
+    }
+}
+
+a {
+    text-decoration: underline;
+}
