@@ -16,6 +16,7 @@ export const emailField = document.getElementById("email-field");
  * @type {HTMLButtonElement}
  */
 export const submitButton = document.getElementById("submit-button");
+
 /**
  * Thank you box that is visible after submitting.
  * Hidden by default.
@@ -23,6 +24,7 @@ export const submitButton = document.getElementById("submit-button");
  * @type {HTMLDivElement}
  */
 export const thanks = document.getElementById("after-register-message");
+
 /**
  * A modal confirming that the user's email has been verified.
  * Hidden by default.
@@ -39,16 +41,14 @@ export const closeModalButton = document.getElementById("close-modal-button");
 
 /**
  * Error box.
- * Hidden by default
- * 
+ * Hidden by default.
+ *
  * @type {HTMLDivElement}
  */
 export const error = document.getElementById("after-register-error");
-
-
 /**
- * Error box text
- * 
+ * Error box text.
+ *
  * @type {HTMLParagraphElement}
  */
 export const errorText = document.getElementById("after-register-error");
