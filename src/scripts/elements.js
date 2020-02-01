@@ -36,3 +36,19 @@ export const verifiedModal = document.getElementById("verified-modal");
  * @type {HTMLButtonElement}
  */
 export const closeModalButton = document.getElementById("close-modal-button");
+
+/**
+ * Error box.
+ * Hidden by default
+ * 
+ * @type {HTMLDivElement}
+ */
+export const error = document.getElementById("after-register-error");
+
+
+/**
+ * Error box text
+ * 
+ * @type {HTMLParagraphElement}
+ */
+export const errorText = document.getElementById("after-register-error");

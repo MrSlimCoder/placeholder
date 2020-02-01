@@ -1,23 +1,43 @@
 import "regenerator-runtime/runtime";
+
 import {
-    register,
-} from "./api";
-import {
-    form, emailField, submitButton,
+    form, emailField, submitButton, error, errorText,
 } from "./elements";
 import {
     updatePageForVerification,
 } from "./verification";
 
-form.addEventListener("submit", async event => {
+const apiURL = "https://freely.is/api";
+
+form.addEventListener("submit", event => {
     event.preventDefault();
 
     const { value: email } = emailField;
-
+    
     try {
         submitButton.classList.add("is-loading");
-        await register(email);
-        updatePageForVerification();
+
+        const request = new XMLHttpRequest();
+
+        request.open("POST", `${apiURL}/submitinterest`, true);
+        request.setRequestHeader("Content-Type", "application/json");
+
+        request.send(JSON.stringify({ email }));
+
+        request.onerror = () => {
+            errorText.innerHTML = request.response ? `There has been an error: ${request.response}` : "There has been an error, please try again.";
+            error.classList.remove("is-hidden");
+        };
+
+        request.onloadend = () => {
+            if (request.status && request.status < 300) {
+                updatePageForVerification();
+            }
+            else {
+                errorText.innerHTML = request.response ? `There has been an error: ${request.response}` : "There has been an error, please try again.";
+                error.classList.remove("is-hidden");
+            }
+        };
     }
     catch (fetchError) {
         console.error(fetchError);
