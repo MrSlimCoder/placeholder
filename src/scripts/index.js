@@ -3,7 +3,7 @@ import "regenerator-runtime/runtime";
 import "core-js";
 
 import {
-    form, emailField, submitButton, error, errorText,
+    emailField, submitButton, error, errorText,
 } from "./elements";
 import {
     updatePageForVerification,
@@ -11,7 +11,7 @@ import {
 
 const apiURL = "https://freely.is/api";
 
-form.addEventListener("submit", event => {
+submitButton.addEventListener("click", event => {
     event.preventDefault();
 
     const { value: email } = emailField;
@@ -45,8 +45,8 @@ form.addEventListener("submit", event => {
             }
         };
     }
-    catch (fetchError) {
-        console.error(fetchError);
+    catch (error) {
+        console.error(error);
     }
     finally {
         submitButton.classList.remove("is-loading");
