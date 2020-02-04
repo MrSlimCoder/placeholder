@@ -34,7 +34,6 @@ html {
 
 .big-art {
     background-image: url("../../assets/cool-art.png");
-    background-position: center, center;
     justify-content: center;
     position: relative;
 }
@@ -45,10 +44,7 @@ html {
 
 .caption {
     position: absolute;
-    @media screen and (min-width: $mobile-breakpoint) {
-        right: 1em;
-    }
-    bottom: 1em;
+    bottom: 0.5em;
 }
 
 .responsive-container-margin {
@@ -67,6 +63,8 @@ html {
     top: 0;
     width: 33%;
     height: 100vh;
+    background-size: cover;
+    background-position: 55% center;
 }
 
 #mobile-top-image {
@@ -79,8 +77,10 @@ html {
 @media screen and (max-width: $mobile-breakpoint) {
     #mobile-top-image {
         visibility: visible;
-        height: 270px;
+        height: 280px;
         width: initial;
+        background-size: cover;
+        background-position: 20% center;
     }
     #desktop-side-image {
         visibility: hidden;
