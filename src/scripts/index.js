@@ -17,7 +17,11 @@ submitButton.addEventListener("click", event => {
     const { value: email } = emailField;
 
     try {
+        // Make the button have a loading animation
         submitButton.classList.add("is-loading");
+
+        // Reset the error message
+        errorText.textContent = "";
 
         const request = new XMLHttpRequest();
 
@@ -27,25 +31,31 @@ submitButton.addEventListener("click", event => {
         request.send(JSON.stringify({ email }));
 
         request.onerror = () => {
-            errorText.innerHTML = request.response
+            console.error(request.response);
+
+            errorText.innerText = request.response
                 ? `There has been an error: ${request.response}`
                 : "There has been an error, please try again.";
+            // Make the error text visible again
             error.classList.remove("is-hidden");
         };
 
         request.onloadend = () => {
-            if (request.status && request.status < 300) {
+            if (request.status && request.status < 400) {
                 updatePageForVerification();
             }
             else {
-                errorText.innerHTML = request.response
+                console.error(request.response);
+                errorText.innerText = request.response
                     ? `There has been an error: ${request.response}`
                     : "There has been an error, please try again.";
+                // Make the error text visible again
                 error.classList.remove("is-hidden");
             }
         };
     }
     catch (error) {
+        errorText.innerText = `An error occurred: ${error}`;
         console.error(error);
     }
     finally {

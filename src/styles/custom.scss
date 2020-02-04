@@ -49,20 +49,15 @@ html {
         right: 1em;
     }
     bottom: 1em;
-    color: $white-ter;
-
-    a {
-        color: $white-ter;
-    }
 }
 
-.top-margin-on-desktop {
+.responsive-container-margin {
     @media screen and (min-width: $mobile-breakpoint) {
         padding-top: 10rem;
     }
 
     @media screen and (max-width: $mobile-breakpoint) {
-        padding: 0 2rem 0 2rem;
+        padding: 2.5rem 2rem 0 2rem;
     }
 }
 

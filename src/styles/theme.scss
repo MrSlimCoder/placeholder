@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-$mobile-breakpoint: 1280px;
+// Hacky fix for when width is exactly 1280px since 1280 < 1280
+$mobile-breakpoint: 1279px;
 
 // Colors
 $grey-darker: #373737;
@@ -29,7 +30,7 @@ $button-border-width: 0;
 $button-hover-color: #5a1546;
 
 // top,right,bottom,left
-$section-padding: 12px 0 0 8rem;
+$section-padding: 0 0 0 8rem;
 
 
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
