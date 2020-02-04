@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// Hacky fix for when width is exactly 1280px since 1280 < 1280
+$mobile-breakpoint: 1279px;
+
+// Colors
+$grey-darker: #373737;
+$grey-dark: #525252;
+$grey-light: rgba(55, 55, 55, 0.6);
+$white-ter: #f1f1f1;
+$link: #942374;
+$modal-background-background-color: rgba(0, 0, 0, 0.35);
+
+$radius: 6px;
+$size-small: 1rem;
+
+// Make input fields a flat background
+$input-background-color: $white-ter;
+$input-border-color: none;
+$input-hover-border-color: none;
+$input-focus-border-color: none;
+$input-shadow: none;
+$input-focus-box-shadow-size: 0;
+$input-placeholder-color: rgba(82, 82, 82, 0.6);
+
+// Make buttons match the input theme to look seamless
+$button-color: $link;
+$button-background-color: $white-ter;
+$button-border-width: 0;
+$button-hover-color: #5a1546;
+
+// top,right,bottom,left
+$section-padding: 0 0 0 8rem;
+
+
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+
+@import "../../node_modules/bulma/sass/base/_all.sass";
+
+@import "../../node_modules/bulma/sass/components/modal.sass";
+
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+
+@import "../../node_modules/bulma/sass/form/shared.sass";
+@import "../../node_modules/bulma/sass/form/input-textarea.sass";
+@import "../../node_modules/bulma/sass/form/tools.sass";
+
+@import "../../node_modules/bulma/sass/layout/section.sass";
+
+@media (max-width: $mobile-breakpoint) {
+    .section {
+        padding: 0 0rem 0 0rem;
+    }
+}
+
+a {
+    text-decoration: underline;
+}

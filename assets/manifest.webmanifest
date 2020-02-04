@@ -1,0 +1,18 @@
+{
+	"background_color": "#fffffff",
+	"description": "Freely is a platform for creators to showcase their work, connect with their audience, and sell their services. We’re a platform for creators, by creators.",
+	"display": "standalone",
+	"icons": [
+		{
+			"sizes": "512x512",
+			"src": "./freely-bg.png",
+			"type": "image/png"
+		}
+	],
+	"lang": "en-US",
+	"name": "Freely Beta",
+	"orientation": "any",
+	"short_name": "Freely Beta",
+	"start_url": "/",
+	"theme_color": "#000000"
+}

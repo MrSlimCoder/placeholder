@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import "./theme.scss";
+
+// Font weight helpers
+@for $i from 1 through 9 {
+    .is-text-weight-#{$i * 100} {
+        font-weight: #{$i * 100};
+    }
+}
+
+// Margin helpers
+@for $i from 1 through 6 {
+    .is-margin-bottom-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+}
+
+html {
+    overflow: auto;
+}
+
+.not-very-wide {
+    max-width: 33rem;
+}
+
+.not-super-wide {
+    max-width: 36rem;
+}
+
+.wide {
+    width: 100%;
+}
+
+.big-art {
+    background-image: url("../../assets/cool-art.png");
+    justify-content: center;
+    position: relative;
+}
+
+.section {
+    height: 100vh;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0.5em;
+}
+
+.responsive-container-margin {
+    @media screen and (min-width: $mobile-breakpoint) {
+        padding-top: 10rem;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        padding: 2.5rem 2rem 0 2rem;
+    }
+}
+
+#desktop-side-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 33%;
+    height: 100vh;
+    background-size: cover;
+    background-position: 55% center;
+}
+
+#mobile-top-image {
+    visibility: hidden;
+    // Don't let this screw up the desktop layout by being invisible but still having dimensions
+    height: 0;
+    width: 0;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+    #mobile-top-image {
+        visibility: visible;
+        height: 280px;
+        width: initial;
+        background-size: cover;
+        background-position: 20% center;
+    }
+    #desktop-side-image {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+#after-register-message {
+    background-color: $white-ter;
+    padding: 1rem 1.75rem;
+    border-radius: $radius;
+}
+
+#verified-modal > .modal-content {
+    background-color: $white;
+    padding: 3rem;
+    border-radius: 2px;
+}
