@@ -15,7 +15,7 @@ When you are ready to start running scripts you must first install the required 
 This should ideally be done with [Yarn 1](https://classic.yarnpkg.com/lang/en/).
 Other package managers like [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.js.org/) may also work, although they will ignore the `yarn.lock` lockfile, which insures that dependencies are installed deterministically.
 
-```s
+```sh
 yarn install
 # or npm install
 # or pnpm install
