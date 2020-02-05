@@ -57,8 +57,12 @@ a {
     text-decoration: underline;
 }
 
-.field {
+.control {
     height: 3.25rem;
+}
+.input,
+.button {
+    height: 100%;
 }
 
 /* #region font-scaling*/
@@ -83,6 +87,10 @@ a {
     }
     .is-size-6 {
         font-size: 1.5 * 1rem !important;
+    }
+    .input,
+    .button {
+        font-size: 1.25rem;
     }
     .is-size-7,
     .help {
@@ -110,9 +118,16 @@ a {
     .is-size-6 {
         font-size: 3 * 1rem !important;
     }
+    .input,
+    .button {
+        font-size: 2 * 1.25em;
+    }
     .is-size-7,
     .help {
         font-size: 3 * 0.75rem !important;
+    }
+    .control {
+        height: 2 * 3.25rem;
     }
 }
 /* #endregion */
