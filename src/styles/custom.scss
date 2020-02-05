@@ -48,12 +48,16 @@ html {
 }
 
 .responsive-container-margin {
-    @media screen and (min-width: $mobile-breakpoint) {
-        padding-top: 10rem;
-    }
-
     @media screen and (max-width: $mobile-breakpoint) {
         padding: 2.5rem 2rem 0 2rem;
+    }
+}
+
+.section {
+    @media screen and (min-width: $mobile-breakpoint) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
