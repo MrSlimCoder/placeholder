@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-// Hacky fix for when width is exactly 1280px since 1280 < 1280
 $mobile-breakpoint: 1279px;
+$big-screen-breakpoint: 2559px;
 
 // Colors
 $grey-darker: #373737;
@@ -59,3 +59,37 @@ a {
 .field {
     height: 3.25rem;
 }
+
+/* #region font-scaling*/
+@media screen and (min-width: $big-screen-breakpoint) {
+    // Just multiply base value by 2
+    // This isn't a great solution because font:browser ratio is not the same, but it gets the job done
+    .is-size-1 {
+        font-size: 1.5 * 3rem !important;
+    }
+    .is-size-2 {
+        font-size: 1.5 * 2.5rem !important;
+    }
+    .is-size-3 {
+        font-size: 1.5 * 2rem !important;
+    }
+    .is-size-4 {
+        font-size: 1.5 * 1.5rem !important;
+    }
+    .is-size-5 {
+        font-size: 1.5 * 1.25rem !important;
+    }
+    .is-size-6 {
+        font-size: 1.5 * 1rem !important;
+    }
+    .is-size-7,.help {
+        font-size: 1.5 * 0.75rem !important;
+    }
+}
+
+$min-font-size: 122px;
+$max-font-size: 164px;
+$min-viewport-width: 300px;
+$max-viewport-width: 5120;
+
+/* #endregion */
