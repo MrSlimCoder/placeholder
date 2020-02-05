@@ -2,6 +2,7 @@
 
 $mobile-breakpoint: 1279px;
 $big-screen-breakpoint: 2559px;
+$really-big-screen-breakpoint: 5119px;
 
 // Colors
 $grey-darker: #373737;
@@ -61,8 +62,9 @@ a {
 }
 
 /* #region font-scaling*/
+
 @media screen and (min-width: $big-screen-breakpoint) {
-    // Just multiply base value by 2
+    // Just multiply base value by 1.5
     // This isn't a great solution because font:browser ratio is not the same, but it gets the job done
     .is-size-1 {
         font-size: 1.5 * 3rem !important;
@@ -82,14 +84,35 @@ a {
     .is-size-6 {
         font-size: 1.5 * 1rem !important;
     }
-    .is-size-7,.help {
+    .is-size-7,
+    .help {
         font-size: 1.5 * 0.75rem !important;
     }
 }
-
-$min-font-size: 122px;
-$max-font-size: 164px;
-$min-viewport-width: 300px;
-$max-viewport-width: 5120;
-
+@media screen and (min-width: $really-big-screen-breakpoint) {
+    // Just multiply base value by 2
+    // This isn't a great solution because font:browser ratio is not the same, but it gets the job done
+    .is-size-1 {
+        font-size: 3 * 3rem !important;
+    }
+    .is-size-2 {
+        font-size: 3 * 2.5rem !important;
+    }
+    .is-size-3 {
+        font-size: 3 * 2rem !important;
+    }
+    .is-size-4 {
+        font-size: 3 * 1.5rem !important;
+    }
+    .is-size-5 {
+        font-size: 3 * 1.25rem !important;
+    }
+    .is-size-6 {
+        font-size: 3 * 1rem !important;
+    }
+    .is-size-7,
+    .help {
+        font-size: 3 * 0.75rem !important;
+    }
+}
 /* #endregion */

@@ -21,11 +21,15 @@ html {
 }
 
 .not-very-wide {
-    max-width: 33rem;
+    @media (min-width: $mobile-breakpoint) {
+        max-width: 30%;
+    }
 }
 
 .not-super-wide {
-    max-width: 36rem;
+    @media (min-width: $mobile-breakpoint) {
+        max-width: 35%;
+    }
 }
 
 .wide {
