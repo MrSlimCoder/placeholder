@@ -32,7 +32,6 @@ $button-hover-color: #5a1546;
 // top,right,bottom,left
 $section-padding: 0 0 0 8rem;
 
-
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 
 @import "../../node_modules/bulma/sass/base/_all.sass";
@@ -55,4 +54,8 @@ $section-padding: 0 0 0 8rem;
 
 a {
     text-decoration: underline;
+}
+
+.field {
+    height: 3.25rem;
 }
