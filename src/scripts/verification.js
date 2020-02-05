@@ -1,5 +1,5 @@
 import {
-    thanks, form, verifiedModal, closeModalButton, error,
+    thanks, form, error, modal,
 } from "./elements";
 
 /**
@@ -16,10 +16,25 @@ export function updatePageForVerification(verified = false) {
     form.classList.add("is-hidden");
 
     if (verified) {
-        verifiedModal.classList.add("is-active");
+        modal.parent.classList.add("is-active");
     }
 }
 
-closeModalButton.addEventListener("click", () =>
-    verifiedModal.classList.remove("is-active"),
+modal.closeButton.addEventListener("click", () =>
+    modal.parent.classList.remove("is-active"),
 );
+
+/**
+ * Updates page elements for when the user tried to verify their email but it failed.
+ * The API server will redirect users to `/?error` trigger this.
+ */
+export function updatePageForVerificationError() {
+    updatePageForVerification(true);
+
+    modal.title.innerText = "Verification Error";
+    modal.body.innerText = [
+        "Something went wrong while verifying your email",
+        "Please try again later",
+        "If this error keeps happening contact a member of Freely staff",
+    ].join(". ");
+}

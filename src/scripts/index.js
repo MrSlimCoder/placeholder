@@ -6,7 +6,7 @@ import {
     emailField, submitButton, error, errorText,
 } from "./elements";
 import {
-    updatePageForVerification,
+    updatePageForVerification, updatePageForVerificationError,
 } from "./verification";
 
 const apiURL = "https://freely.is/api";
@@ -66,4 +66,8 @@ submitButton.addEventListener("click", event => {
 if (window.location.search === "?verified") {
     // Current page URL is `https://freely.is/?verified`
     updatePageForVerification(true);
+}
+else if (window.location.search === "?error") {
+    // Current page URL is `https://freely.is/?error`
+    updatePageForVerificationError();
 }
